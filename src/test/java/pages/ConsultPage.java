@@ -2,14 +2,12 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.FindBy;
 
 import java.util.concurrent.TimeUnit;
 
 
-public class ConsultPage {
+public class ConsultPage{
     private WebDriver driver;
     By soundButton = By.xpath("//div[contains(@class, 'background-video__sound-icon')]/*[1]");
     By cookie = By.xpath("//div[@class='cookie-disclaimer__column']/button");

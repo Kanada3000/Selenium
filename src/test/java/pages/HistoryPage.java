@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class HistoryPage {
+public class HistoryPage{
     private WebDriver driver;
     By link = By.xpath(
             "//a[contains(@class, 'timeline-slider__switcher-button') and contains(@class, 'js-tabs-link') and @data-item='14']");

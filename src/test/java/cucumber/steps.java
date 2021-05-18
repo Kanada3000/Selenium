@@ -6,14 +6,11 @@ import cucumber.annotation.en.Given;
 import cucumber.annotation.en.Then;
 import cucumber.annotation.en.When;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class steps {
-    String path = "./driver/chromedriver.exe";
+
     WebDriver driver;
     ConsultPage consultPage;
     FaqPage faqPage;
@@ -21,18 +18,17 @@ public class steps {
     InsightsPage insightsPage;
     JobPage jobPage;
     MainPage mainPage;
+    WebpageFactory webpageFactory;
 
     @AfterMethod(alwaysRun = true)
     public void closeBrowser(){
         driver.quit();
     }
 
-    @Given("^page https://www.epam.com/$")
-    public void MainPage(){
-        System.setProperty("webdriver.chrome.driver", path);
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://www.epam.com");
+    @Given("open (.*) page")
+    public void openPage(String webpage) {
+        webpageFactory = new WebpageFactory();
+        driver = webpageFactory.createPage(webpage, driver);
     }
 
     @When("^hover link Services and click on Optimize$")
@@ -57,15 +53,6 @@ public class steps {
         assert (mainPage.isRedirected());
     }
 
-    @Given("^page https://investors.epam.com/investors/faq$")
-    public void FaqPage(){
-        System.setProperty("webdriver.chrome.driver", path);
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://investors.epam.com/investors/faq");
-        driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
-    }
-
     @When("^click \"epam\" logo$")
     public void backToHome(){
         faqPage = new FaqPage(driver);
@@ -88,14 +75,6 @@ public class steps {
         assert (faqPage.isAnswerDisplay());
     }
 
-    @Given("^page https://www.epam.com/insights$")
-    public void InsightsPage(){
-        System.setProperty("webdriver.chrome.driver", path);
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://www.epam.com/insights");
-    }
-
     @When("^scroll below the \"FILTER BY\"$")
     public void scrollToFilter(){
         insightsPage = new InsightsPage(driver);
@@ -105,14 +84,6 @@ public class steps {
     @Then("^the block \"FILTER BY\" fixed on top of the window$")
     public void isBlockFixed(){
         assert (insightsPage.isFixed());
-    }
-
-    @Given("^page https://www.epam.com/services/consult-and-design$")
-    public void ConsultPage(){
-        System.setProperty("webdriver.chrome.driver", path);
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://www.epam.com/services/consult-and-design");
     }
 
     @When("^click on crossed out picture with speaker$")
@@ -127,14 +98,6 @@ public class steps {
         assert (consultPage.isSounds());
     }
 
-    @Given("^page https://www.epam.com/careers/job-listings$")
-    public void JobPage(){
-        System.setProperty("webdriver.chrome.driver", path);
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://www.epam.com/careers/job-listings");
-    }
-
     @When("^fill and submit a form$")
     public void fillForm(){
         jobPage = new JobPage(driver);
@@ -146,14 +109,6 @@ public class steps {
     @Then("^get a list of chosen jobs$")
     public void jobList(){
         assert (jobPage.isCorrectJob("Senior Full Stack Java Software Engineer (Angular)"));
-    }
-
-    @Given("^page https://www.epam.com/about/who-we-are/history$")
-    public void HistoryPage(){
-        System.setProperty("webdriver.chrome.driver", path);
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://www.epam.com/about/who-we-are/history");
     }
 
     @When("^click on white dots left from picture$")

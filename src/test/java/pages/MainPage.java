@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.concurrent.TimeUnit;
 
 
-public class MainPage {
+public class MainPage{
     private WebDriver driver;
     private WebDriverWait wait;
 

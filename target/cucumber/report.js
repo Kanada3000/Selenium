@@ -7,276 +7,120 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.scenario({
-  "line": 3,
-  "name": "Getting to Home page",
-  "description": "",
-  "id": "epam-website;getting-to-home-page",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 4,
-  "name": "page https://investors.epam.com/investors/faq",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 5,
-  "name": "click \"epam\" logo",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 6,
-  "name": "get redirected to the main page",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "steps.FaqPage()"
-});
-formatter.result({
-  "duration": 10818799500,
-  "status": "passed"
-});
-formatter.match({
-  "location": "steps.backToHome()"
-});
-formatter.result({
-  "duration": 7203125000,
-  "status": "passed"
-});
-formatter.match({
-  "location": "steps.isRedirectedHome()"
-});
-formatter.result({
-  "duration": 36419800,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 8,
-  "name": "Getting to Optimize",
-  "description": "",
-  "id": "epam-website;getting-to-optimize",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 9,
-  "name": "page https://www.epam.com/",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 10,
-  "name": "hover link Services and click on Optimize",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 11,
-  "name": "get redirected to the Optimize page",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "steps.MainPage()"
-});
-formatter.result({
-  "duration": 28604421100,
-  "status": "passed"
-});
-formatter.match({
-  "location": "steps.hoverServices()"
-});
-formatter.result({
-  "duration": 12021804500,
-  "status": "passed"
-});
-formatter.match({
-  "location": "steps.isRedirectedOptimize()"
-});
-formatter.result({
-  "duration": 9678500,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 13,
-  "name": "Language change (Ukraine)",
-  "description": "",
-  "id": "epam-website;language-change-(ukraine)",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 14,
-  "name": "page https://www.epam.com/",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 15,
-  "name": "switch location to Ukraine",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 16,
-  "name": "get redirected to https://careers.epam.ua/",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "steps.MainPage()"
-});
-formatter.result({
-  "duration": 33467829700,
-  "status": "passed"
-});
-formatter.match({
-  "location": "steps.switchLocation()"
-});
-formatter.result({
-  "duration": 380182700,
-  "status": "passed"
-});
-formatter.match({
-  "location": "steps.isRedirectedCareers()"
-});
-formatter.result({
-  "duration": 10017128400,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 18,
-  "name": "FAQ",
-  "description": "",
-  "id": "epam-website;faq",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 19,
-  "name": "page https://investors.epam.com/investors/faq",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 20,
-  "name": "click on title of question",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 21,
-  "name": "an expanded list of questions and answers should appear",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "steps.FaqPage()"
-});
-formatter.result({
-  "duration": 19097735000,
-  "status": "passed"
-});
-formatter.match({
-  "location": "steps.clickTitle()"
-});
-formatter.result({
-  "duration": 85508600,
-  "status": "passed"
-});
-formatter.match({
-  "location": "steps.questionsList()"
-});
-formatter.result({
-  "duration": 252157000,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 23,
-  "name": "Fixed position of block \"FILTER BY\"",
-  "description": "",
-  "id": "epam-website;fixed-position-of-block-\"filter-by\"",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 24,
-  "name": "page https://www.epam.com/insights",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 25,
-  "name": "scroll below the \"FILTER BY\"",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 26,
-  "name": "the block \"FILTER BY\" fixed on top of the window",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "steps.InsightsPage()"
-});
-formatter.result({
-  "duration": 35549620300,
-  "status": "passed"
-});
-formatter.match({
-  "location": "steps.scrollToFilter()"
-});
-formatter.result({
-  "duration": 321471900,
-  "status": "passed"
-});
-formatter.match({
-  "location": "steps.isBlockFixed()"
-});
-formatter.result({
-  "duration": 2256644700,
-  "status": "passed"
-});
-formatter.scenario({
   "comments": [
+    {
+      "line": 3,
+      "value": "#  Scenario: Getting to Home page"
+    },
+    {
+      "line": 4,
+      "value": "#    Given open faq page"
+    },
+    {
+      "line": 5,
+      "value": "#    When click \"epam\" logo"
+    },
+    {
+      "line": 6,
+      "value": "#    Then get redirected to the main page"
+    },
+    {
+      "line": 7,
+      "value": "#"
+    },
+    {
+      "line": 8,
+      "value": "#  Scenario: Getting to Optimize"
+    },
+    {
+      "line": 9,
+      "value": "#    Given open main page"
+    },
+    {
+      "line": 10,
+      "value": "#    When hover link Services and click on Optimize"
+    },
+    {
+      "line": 11,
+      "value": "#    Then get redirected to the Optimize page"
+    },
+    {
+      "line": 13,
+      "value": "#  Scenario: Language change (Ukraine)"
+    },
+    {
+      "line": 14,
+      "value": "#    Given open main page"
+    },
+    {
+      "line": 15,
+      "value": "#    When switch location to Ukraine"
+    },
+    {
+      "line": 16,
+      "value": "#    Then get redirected to https://careers.epam.ua/"
+    },
+    {
+      "line": 18,
+      "value": "#  Scenario: FAQ"
+    },
+    {
+      "line": 19,
+      "value": "#    Given open faq page"
+    },
+    {
+      "line": 20,
+      "value": "#    When click on title of question"
+    },
+    {
+      "line": 21,
+      "value": "#    Then an expanded list of questions and answers should appear"
+    },
+    {
+      "line": 22,
+      "value": "#"
+    },
+    {
+      "line": 23,
+      "value": "#  Scenario: Fixed position of block \"FILTER BY\""
+    },
+    {
+      "line": 24,
+      "value": "#    Given open insights page"
+    },
+    {
+      "line": 25,
+      "value": "#    When scroll below the \"FILTER BY\""
+    },
+    {
+      "line": 26,
+      "value": "#    Then the block \"FILTER BY\" fixed on top of the window"
+    },
     {
       "line": 27,
       "value": "#"
+    },
+    {
+      "line": 28,
+      "value": "#  Scenario: Watching a video with sound"
+    },
+    {
+      "line": 29,
+      "value": "#    Given open consult page"
+    },
+    {
+      "line": 30,
+      "value": "#    When click on crossed out picture with speaker"
+    },
+    {
+      "line": 31,
+      "value": "#    Then this video make sounds"
+    },
+    {
+      "line": 32,
+      "value": "#"
     }
   ],
-  "line": 28,
-  "name": "Watching a video with sound",
-  "description": "",
-  "id": "epam-website;watching-a-video-with-sound",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 29,
-  "name": "page https://www.epam.com/services/consult-and-design",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 30,
-  "name": "click on crossed out picture with speaker",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 31,
-  "name": "this video make sounds",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "steps.ConsultPage()"
-});
-formatter.result({
-  "duration": 27748465200,
-  "status": "passed"
-});
-formatter.match({
-  "location": "steps.clickSpeaker()"
-});
-formatter.result({
-  "duration": 2462544300,
-  "status": "passed"
-});
-formatter.match({
-  "location": "steps.isSounds()"
-});
-formatter.result({
-  "duration": 62386100,
-  "status": "passed"
-});
-formatter.scenario({
   "line": 33,
   "name": "Searching for job",
   "description": "",
@@ -286,7 +130,7 @@ formatter.scenario({
 });
 formatter.step({
   "line": 34,
-  "name": "page https://www.epam.com/careers/job-listings",
+  "name": "open job page",
   "keyword": "Given "
 });
 formatter.step({
@@ -300,24 +144,30 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.match({
-  "location": "steps.JobPage()"
+  "arguments": [
+    {
+      "val": "job",
+      "offset": 5
+    }
+  ],
+  "location": "steps.openPage(String)"
 });
 formatter.result({
-  "duration": 29291352400,
+  "duration": 12432035400,
   "status": "passed"
 });
 formatter.match({
   "location": "steps.fillForm()"
 });
 formatter.result({
-  "duration": 7451384700,
+  "duration": 7275517900,
   "status": "passed"
 });
 formatter.match({
   "location": "steps.jobList()"
 });
 formatter.result({
-  "duration": 235065700,
+  "duration": 1139708900,
   "status": "passed"
 });
 formatter.scenario({
@@ -330,7 +180,7 @@ formatter.scenario({
 });
 formatter.step({
   "line": 39,
-  "name": "page https://www.epam.com/about/who-we-are/history",
+  "name": "open history page",
   "keyword": "Given "
 });
 formatter.step({
@@ -344,24 +194,30 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.match({
-  "location": "steps.HistoryPage()"
+  "arguments": [
+    {
+      "val": "history",
+      "offset": 5
+    }
+  ],
+  "location": "steps.openPage(String)"
 });
 formatter.result({
-  "duration": 71909040900,
+  "duration": 13874801900,
   "status": "passed"
 });
 formatter.match({
   "location": "steps.clickDots()"
 });
 formatter.result({
-  "duration": 634095300,
+  "duration": 148071300,
   "status": "passed"
 });
 formatter.match({
   "location": "steps.isCorrectYear()"
 });
 formatter.result({
-  "duration": 46095400,
+  "duration": 29156500,
   "status": "passed"
 });
 });

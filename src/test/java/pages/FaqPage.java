@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class FaqPage {
+public class FaqPage{
     private WebDriver driver;
 
     By question = By.xpath("//h6[text()='REPORTING & FINANCES']/parent::*");

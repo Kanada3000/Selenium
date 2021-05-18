@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
-public class InsightsPage {
+public class InsightsPage{
     private WebDriver driver;
     private WebDriverWait wait;
 
